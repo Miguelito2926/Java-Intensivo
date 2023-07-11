@@ -24,7 +24,11 @@ public class Game {
 	private String platforms;
 	private Double score;
 	private String imgUrl;
-	private String shortDescriptio;
+	
+	@Column(columnDefinition = "TEXT")// Configura coluna para receber texto longos, antes da configuração era varchar 255
+	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")// Configura coluna para receber texto longos, antes da configuração era varchar 255
 	private String longDescription;
 	
 	
@@ -34,7 +38,7 @@ public class Game {
 
 
 	public Game(Long id, String title, int year, String genre, String platforms, Double score, String imgUrl,
-			String shortDescriptio, String longDescription) {
+			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
@@ -42,7 +46,7 @@ public class Game {
 		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shortDescriptio = shortDescriptio;
+		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
 
@@ -118,12 +122,12 @@ public class Game {
 
 
 	public String getShortDescriptio() {
-		return shortDescriptio;
+		return shortDescription;
 	}
 
 
 	public void setShortDescriptio(String shortDescriptio) {
-		this.shortDescriptio = shortDescriptio;
+		this.shortDescription = shortDescription;
 	}
 
 
