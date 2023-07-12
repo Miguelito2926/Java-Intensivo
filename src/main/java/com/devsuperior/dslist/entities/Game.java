@@ -121,7 +121,7 @@ public class Game {
 	}
 
 
-	public String getShortDescriptio() {
+	public String getShortDescription() {
 		return shortDescription;
 	}
 
